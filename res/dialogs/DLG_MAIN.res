@@ -1,0 +1,13 @@
+// C4D-DialogResource
+DIALOG DLG_MAIN
+{
+  NAME IDS_DIALOG; SCALE_V; SCALE_H; 
+  
+  TREEVIEW ID_DOCTREE
+  {
+    SCALE_V; SCALE_H; 
+    BORDER; 
+    NO_MULTISELECT; 
+    ALTERNATE_BG;
+  }
+}

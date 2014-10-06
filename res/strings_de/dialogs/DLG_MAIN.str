@@ -1,0 +1,6 @@
+// C4D-DialogResource
+
+DIALOGSTRINGS DLG_MAIN
+{
+  IDS_DIALOG  "QuickDocs 2";
+}
