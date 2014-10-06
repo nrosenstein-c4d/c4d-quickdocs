@@ -1,6 +1,6 @@
 STRINGTABLE {
-    IDC_QUICKDOCS "QuickDocs 2";
-    IDC_QUICKDOCS_HELP "Opens QuickDocs 2";
+    IDC_QUICKDOCS "QuickDocs 2.2";
+    IDC_QUICKDOCS_HELP "Opens QuickDocs";
     IDC_CONTEXT_TOGGLEMENUBAR "Toggle Menu Bar";
     IDC_CONTEXT_CLOSEQD "Close QuickDocs";
 }
