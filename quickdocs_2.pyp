@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 #
-# Copyright (C) 2013-2014  Niklas Rosenstein
+# Copyright (C) 2013-2015  Niklas Rosenstein
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 # THE SOFTWARE.
 
 __author__ = 'Niklas Rosenstein <rosensteinniklas (at) gmail.com>'
-__version__ = '2.2'
+__version__ = '2.3'
 
 import os, sys
 import c4d
@@ -81,7 +81,10 @@ class DocumentTreeModel(c4d.gui.TreeViewFunctions):
         return doc.GetPred()
 
     def GetName(self, root, ud, doc):
-        return doc.GetDocumentName()
+        name = doc.GetDocumentName()
+        if doc.GetChanged():
+            name = name + " (*)"
+        return name
 
     def IsSelected(self, root, ud, doc):
         return doc == c4d.documents.GetActiveDocument()

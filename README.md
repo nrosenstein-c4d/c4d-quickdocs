@@ -7,6 +7,11 @@ with Cinema 4D R13 and above.
 
 ## Changelog
 
+__2.3__
+
+- Added (*) after document name to denote when the scene has unsaved
+changes that need to be saved.
+
 __2.2__
 
 - The plugin can now be installed by simply pasting the plugin
