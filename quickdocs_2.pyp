@@ -21,7 +21,7 @@
 # THE SOFTWARE.
 
 __author__ = 'Niklas Rosenstein <rosensteinniklas (at) gmail.com>'
-__version__ = '2.3'
+__version__ = '2.2'
 
 import os, sys
 import c4d

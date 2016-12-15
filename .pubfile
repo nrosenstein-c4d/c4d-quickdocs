@@ -1,0 +1,3 @@
+versionPatterns:
+  "quickdocs_2.pyp": "__version__ = '$VERSION'"
+  "README.md": ".*Current Version.*: $VERSION.*"
