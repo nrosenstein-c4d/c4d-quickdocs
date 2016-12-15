@@ -4,7 +4,7 @@
   Get an overview of all currently opened scenes. Compatible with C4D R13+
 </p>
 <p align="center"><img src="http://i.imgur.com/fiMP2NX.png"/></p>
-<p align="center"><strong>Current Version</strong>: 2.2</p>
+<p align="center"><strong>Current Version</strong>: 2.3.0</p>
 
 <h2><center>Changelog</center></h2>
 
