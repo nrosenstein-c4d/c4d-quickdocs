@@ -1,31 +1,33 @@
-# QuickDocs 2 - Cinema 4D scene manager
+<h1><center>QuickDocs2</center></h1>
 
-Get an overview of your opened scenes in Cinema 4D. Compatible
-with Cinema 4D R13 and above.
+<p align="center">
+  Get an overview of all currently opened scenes. Compatible with C4D R13+
+</p>
+<p align="center"><img src="http://i.imgur.com/fiMP2NX.png"/></p>
+<p align="center"><strong>Current Version</strong>: 2.2</p>
 
-![Preview Image](preview.png)
+<h2><center>Changelog</center></h2>
 
-## Changelog
+2.3:
 
-__2.3__
-
+- Add "Close Others" to Right-Click menu
 - Added (*) after document name to denote when the scene has unsaved
-changes that need to be saved.
+  changes that need to be saved.
 
-__2.2__
+2.2:
 
 - The plugin can now be installed by simply pasting the plugin
 into the Cinema 4D plugins directory, installing `c4dtools` is
 not required!
 - Fixed the menu-bar toggle behaviour
 
-__2.1__
+2.1:
 
 - Can't remember what changed compared to its prior version. Let's
 just say it's the initial version, ok?
 
-## Legal
+<h2><center>License</center></h2>
 
-Plugin icon from http://www.iconarchive.com/show/dark-blog-icons-by-brainleaf.html.
+- Licensed under MIT since version 2.2
+- Plugin icon from http://www.iconarchive.com/show/dark-blog-icons-by-brainleaf.html.
 
-Licensed under MIT since version 2.2

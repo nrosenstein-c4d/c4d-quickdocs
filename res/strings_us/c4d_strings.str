@@ -2,5 +2,8 @@ STRINGTABLE {
     IDC_QUICKDOCS "QuickDocs 2.2";
     IDC_QUICKDOCS_HELP "Opens QuickDocs";
     IDC_CONTEXT_TOGGLEMENUBAR "Toggle Menu Bar";
-    IDC_CONTEXT_CLOSEQD "Close QuickDocs";
+    IDC_CONTEXT_CLOSEDIALOG "Close Window";
+    IDC_CONTEXT_CLOSE "Close";
+    IDC_CONTEXT_CLOSEALL "Close All";
+    IDC_CONTEXT_CLOSEOTHERS "Close Others";
 }

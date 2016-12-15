@@ -1,6 +1,9 @@
 STRINGTABLE {
     IDC_QUICKDOCS "QuickDocs 2.2";
-    IDC_QUICKDOCS_HELP "Öffnet QuickDocs";
-    IDC_CONTEXT_TOGGLEMENUBAR "Menüleiste ein/ausblenden";
-    IDC_CONTEXT_CLOSEQD "QuickDocs schließen";
+    IDC_QUICKDOCS_HELP "\u00D6ffnet QuickDocs";
+    IDC_CONTEXT_TOGGLEMENUBAR "Men\u00FCleiste Ein-/Ausblenden";
+    IDC_CONTEXT_CLOSEDIALOG "Fenster Schlie\u00DFen";
+    IDC_CONTEXT_CLOSE "Schlie\u00DFen";
+    IDC_CONTEXT_CLOSEALL "Alle Schlie\u00DFen";
+    IDC_CONTEXT_CLOSEOTHERS "Alle Anderen Schlie\u00DFen";
 }

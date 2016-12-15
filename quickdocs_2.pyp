@@ -44,7 +44,10 @@ class res:
     IDC_QUICKDOCS             = 2
     IDC_QUICKDOCS_HELP        = 3
     IDC_CONTEXT_TOGGLEMENUBAR = 4
-    IDC_CONTEXT_CLOSEQD       = 5
+    IDC_CONTEXT_CLOSEDIALOG   = 5
+    IDC_CONTEXT_CLOSE         = 6
+    IDC_CONTEXT_CLOSEALL      = 7
+    IDC_CONTEXT_CLOSEOTHERS   = 8
 
 @singleton
 class PluginData:
@@ -104,16 +107,32 @@ class DocumentTreeModel(c4d.gui.TreeViewFunctions):
         c4d.CallCommand(CMD_CLOSE_DOCUMENT)
 
     def CreateContextMenu(self, root, ud, doc, column, bc):
+        bc.FlushAll()
+        bc.SetString(*res['IDC_CONTEXT_CLOSE'])
+        bc.SetString(*res['IDC_CONTEXT_CLOSEALL'])
+        bc.SetString(*res['IDC_CONTEXT_CLOSEOTHERS'])
         bc.InsData(0, "")
         bc.SetString(*res['IDC_CONTEXT_TOGGLEMENUBAR'])
-        bc.SetString(*res['IDC_CONTEXT_CLOSEQD'])
+        bc.SetString(*res['IDC_CONTEXT_CLOSEDIALOG'])
 
     def ContextMenuCall(self, root, ud, doc, column, command):
-        if command == c4d.ID_TREEVIEW_CONTEXT_RESET:
+        if command == res.IDC_CONTEXT_CLOSE:
+            c4d.CallCommand(CMD_CLOSE_DOCUMENT)
+        elif command == res.IDC_CONTEXT_CLOSEALL:
             c4d.CallCommand(CMD_CLOSE_DOCUMENTS)
+        elif command == res.IDC_CONTEXT_CLOSEOTHERS:
+            current = c4d.documents.GetActiveDocument()
+            doc = c4d.documents.GetFirstDocument()
+            while doc:
+                next = doc.GetNext()
+                if doc != current:
+                    c4d.documents.SetActiveDocument(doc)
+                    c4d.CallCommand(CMD_CLOSE_DOCUMENT)
+                doc = next
+            c4d.documents.SetActiveDocument(current)
         elif command == res.IDC_CONTEXT_TOGGLEMENUBAR:
             c4d.SpecialEventAdd(PLMSG_QUICKDOCS_TOGGLEMENUBAR)
-        elif command == res.IDC_CONTEXT_CLOSEQD:
+        elif command == res.IDC_CONTEXT_CLOSEDIALOG:
             c4d.SpecialEventAdd(PLMSG_QUICKDOCS_CLOSE)
         else:
             return False
